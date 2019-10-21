@@ -1,4 +1,4 @@
-# locusnine-front-end
+# client
 
 ## Project setup
 ```

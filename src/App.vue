@@ -1,28 +1,44 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-app-bar color="blue-grey darken-4" dark app>
+      <v-toolbar-title class="headline text-uppercase">
+        <span>locusnine</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn
+        text
+        href="#"
+        target="_blank"
+      >
+        <span class="mr-2">John Smith</span>
+      </v-btn>
+    </v-app-bar>
+    <v-content>
+      <v-row>
+        <v-col cols="12">
+        <!-- <i class="fas fa-users"></i> -->
+          <UserModal/>
+        </v-col>
+        <v-col cols="12">
+          <Users/>
+        </v-col>
+      </v-row>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Users from './components/Users';
+import UserModal from './components/UserModal';
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Users,
+    UserModal
+  },
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
